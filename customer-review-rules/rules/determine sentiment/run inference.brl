@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>run inference</name>
+  <uuid>7cdfa6cd-5389-4ef1-8499-7191645db5a6</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[then
+	run inference on 'the LLM service' ;
+	set the sentiment of review to the sentiment from the output of 'the LLM service' ; 
+	
+	]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,27 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/customer-review-rules//customer-review-xom"
+property uuid "38546ac7-6c6a-4a3c-9480-0e3cbd97444a"
+package com.acme;
+
+
+public class CustomerReview
+{
+    public string content;
+    public string disposition;
+    public com.acme.Sentiment sentiment;
+    public CustomerReview();
+}
+
+public final class Sentiment
+        extends java.lang.Enum
+{
+    domain {static POSITIVE, static NEGATIVE, static UNKNOWN}
+    public static final readonly com.acme.Sentiment NEGATIVE;
+    public static final readonly com.acme.Sentiment POSITIVE;
+    public static final readonly com.acme.Sentiment UNKNOWN;
+    public static com.acme.Sentiment map(string arg);
+    public static com.acme.Sentiment valueOf(string arg);
+    public static com.acme.Sentiment[] values();
+}
+

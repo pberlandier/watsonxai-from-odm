@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>decision parameters</name>
+  <uuid>b8312ee5-0dc4-44ab-9f26-bf2f2efbb1f3</uuid>
+  <variables name="review" type="com.acme.CustomerReview" initialValue="" verbalization="review"/>
+</ilog.rules.studio.model.base:VariableSet>

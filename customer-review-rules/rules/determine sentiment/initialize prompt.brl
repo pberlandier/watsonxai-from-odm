@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>initialize prompt</name>
+  <uuid>1754707d-4258-4b65-b759-0fbdf0e4d730</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[then
+	set the prompt template of 'the LLM service' to 'sentiment extraction' ; 
+	add variable ["{review}" = the content of review] to 'the LLM service' ;
+	
+	]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

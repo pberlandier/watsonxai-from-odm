@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>analyze customer review</name>
+  <uuid>d86dd55d-ec54-4c9e-b6fc-9013921f0343</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="determine review sentiment" Ordering="Literal">
+        <RuleList>
+          <Rule Uuid="1754707d-4258-4b65-b759-0fbdf0e4d730"/>
+          <Rule Uuid="7cdfa6cd-5389-4ef1-8499-7191645db5a6"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="dispose of review" Ordering="Default">
+        <RuleList>
+          <Package Name="dispose of review"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1">
+        <Actions Language="irl"><![CDATA[System.out.println(review.disposition);]]></Actions>
+      </StopTask>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="determine review sentiment"/>
+      <TaskNode Identifier="node_3" Task="dispose of review"/>
+      <BranchNode Identifier="node_4"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_4"/>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_1"/>
+      <Transition Identifier="transition_3" Source="node_4" Target="node_3">
+        <Conditions Language="bal"><![CDATA[the invocation of 'the LLM service' was successful]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_4" Source="node_4" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_2#height">68.103516</Data>
+      <Data Name="node_4#width">36.414215</Data>
+      <Data Name="node_1#height">19.999987</Data>
+      <Data Name="node_3#height">53.402344</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_4#height">36.414215</Data>
+      <Data Name="transition_3#label">LLM invocation was successful</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_2#width">128.70117</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_3#y">302.2189</Data>
+      <Data Name="node_4#x">64.3506</Data>
+      <Data Name="node_4#y">207.31062</Data>
+      <Data Name="node_0#x">64.350586</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_1#x">64.350586</Data>
+      <Data Name="node_1#y">388.92004</Data>
+      <Data Name="node_2#x">64.350586</Data>
+      <Data Name="node_2#y">105.05176</Data>
+      <Data Name="node_3#x">102.350586</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_4#name">node_6</Data>
+      <Data Name="node_1#width">20.000004</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_3#name">node_3</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow>
+</rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

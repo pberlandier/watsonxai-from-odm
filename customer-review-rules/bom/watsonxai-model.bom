@@ -1,0 +1,29 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/customer-review-rules//watsonx-helper/target/watsonx-helper-0.0.1-SNAPSHOT-jar-with-dependencies.jar"
+property uuid "a3fcf3a1-4d7c-44de-a5f4-9dd19f08192f"
+package com.ibm.odm;
+
+
+public class WatsonxAIRunner
+{
+    public string decodingMethod;
+    public readonly boolean error;
+    public readonly boolean exception;
+    public readonly string input;
+    public int maxNewTokens;
+    public readonly string message;
+    public int minNewTokens;
+    public string modelId;
+    public readonly string output;
+    public string projectId;
+    public string promptTemplate;
+    public int repetitionPenalty;
+    public readonly boolean valid;
+    public WatsonxAIRunner();
+    public void addVariable(string arg1, string arg2);
+    public void clearVariables();
+    public void runInference(string arg1, string arg2, boolean arg3);
+    public void runInference();
+}
+

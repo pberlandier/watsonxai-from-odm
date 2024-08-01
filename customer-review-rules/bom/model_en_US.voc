@@ -1,0 +1,18 @@
+# Vocabulary Properties
+uuid = 89f73776-9a7a-45f0-b1f6-78680765eddc
+
+# com.acme.CustomerReview
+com.acme.CustomerReview#concept.label = customer review
+com.acme.CustomerReview.content#phrase.action = set the content of {this} to {content}
+com.acme.CustomerReview.content#phrase.navigation = {content} of {this}
+com.acme.CustomerReview.disposition#phrase.action = set the disposition of {this} to {disposition}
+com.acme.CustomerReview.disposition#phrase.navigation = {disposition} of {this}
+com.acme.CustomerReview.sentiment#phrase.action = set the sentiment of {this} to {sentiment}
+com.acme.CustomerReview.sentiment#phrase.navigation = {sentiment} of {this}
+
+# com.acme.Sentiment
+com.acme.Sentiment#concept.label = sentiment
+com.acme.Sentiment.NEGATIVE#instance.label = NEGATIVE
+com.acme.Sentiment.POSITIVE#instance.label = POSITIVE
+com.acme.Sentiment.UNKNOWN#instance.label = UNKNOWN
+com.acme.Sentiment.map(java.lang.String)#phrase.navigation = the sentiment from {0}

@@ -1,0 +1,6 @@
+/output/
+/reports/
+/target/
+.syncEntries
+*.log
+

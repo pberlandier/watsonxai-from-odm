@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="analyzeCustomerReview" usingRuleflow="true" ruleflowName="analyze customer review" targetRuleProjectName="customer-review-rules">
+  <name>analyzeCustomerReview</name>
+  <uuid>1f521a98-f1c0-4bfb-b5c7-3e14f883fd2c</uuid>
+  <referencedVariables variableName="review" variableSetName="decision parameters" direction="IN_OUT">
+    <variableSet href="../rules/decision%20parameters.var#b8312ee5-0dc4-44ab-9f26-bf2f2efbb1f3"/>
+  </referencedVariables>
+  <ruleflow href="../rules/analyze%20customer%20review.rfl#d86dd55d-ec54-4c9e-b6fc-9013921f0343"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="reviewDisposition_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../customer-review-rules#cda5c0a0-a970-438d-8ef5-bcf36759227d"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

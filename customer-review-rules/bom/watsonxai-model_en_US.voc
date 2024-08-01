@@ -1,0 +1,28 @@
+# Vocabulary Properties
+uuid = 9d1885f5-be1e-4415-a929-b7d873ed6d0f
+
+# com.ibm.odm.WatsonxAIRunner
+com.ibm.odm.WatsonxAIRunner#concept.label = watsonx.ai runner
+com.ibm.odm.WatsonxAIRunner.addVariable(java.lang.String,java.lang.String)#phrase.action = add variable [{0} = {1}] to {this}
+com.ibm.odm.WatsonxAIRunner.clearVariables()#phrase.action = clear the variables of {this}
+com.ibm.odm.WatsonxAIRunner.decodingMethod#phrase.action = set the decoding method of {this} to {decoding method}
+com.ibm.odm.WatsonxAIRunner.decodingMethod#phrase.navigation = {decoding method} of {this}
+com.ibm.odm.WatsonxAIRunner.error#phrase.navigation = {this} is error
+com.ibm.odm.WatsonxAIRunner.exception#phrase.navigation = {this} is exception
+com.ibm.odm.WatsonxAIRunner.input#phrase.navigation = {input} of {this}
+com.ibm.odm.WatsonxAIRunner.maxNewTokens#phrase.action = set the max new tokens of {this} to {max new tokens}
+com.ibm.odm.WatsonxAIRunner.maxNewTokens#phrase.navigation = {max new tokens} of {this}
+com.ibm.odm.WatsonxAIRunner.message#phrase.navigation = {message} of {this}
+com.ibm.odm.WatsonxAIRunner.minNewTokens#phrase.action = set the min new tokens of {this} to {min new tokens}
+com.ibm.odm.WatsonxAIRunner.minNewTokens#phrase.navigation = {min new tokens} of {this}
+com.ibm.odm.WatsonxAIRunner.modelId#phrase.action = set the model id of {this} to {model id}
+com.ibm.odm.WatsonxAIRunner.modelId#phrase.navigation = {model id} of {this}
+com.ibm.odm.WatsonxAIRunner.output#phrase.navigation = {output} of {this}
+com.ibm.odm.WatsonxAIRunner.projectId#phrase.action = set the project id of {this} to {project id}
+com.ibm.odm.WatsonxAIRunner.projectId#phrase.navigation = {project id} of {this}
+com.ibm.odm.WatsonxAIRunner.promptTemplate#phrase.action = set the prompt template of {this} to {prompt template}
+com.ibm.odm.WatsonxAIRunner.promptTemplate#phrase.navigation = {prompt template} of {this}
+com.ibm.odm.WatsonxAIRunner.repetitionPenalty#phrase.action = set the repetition penalty of {this} to {repetition penalty}
+com.ibm.odm.WatsonxAIRunner.repetitionPenalty#phrase.navigation = {repetition penalty} of {this}
+com.ibm.odm.WatsonxAIRunner.runInference()#phrase.action = run inference on {this}
+com.ibm.odm.WatsonxAIRunner.valid#phrase.navigation = the invocation of {this} was successful

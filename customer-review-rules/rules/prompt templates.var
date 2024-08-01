@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>prompt templates</name>
+  <uuid>d5e29bfb-f620-4541-b3e4-f700e21655a6</uuid>
+  <variables name="sentimentPromptTemplate" type="java.lang.String" initialValue="&quot;Determine the general sentiment of the following text. Limit your output to a single word, either 'positive' or 'negative'. Input: The quality of your product is bad! Output: negative. Input: {review}. Output:&quot;" verbalization="sentiment extraction"/>
+</ilog.rules.studio.model.base:VariableSet>
