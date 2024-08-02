@@ -1,6 +1,6 @@
 # watsonx.ai invocation from ODM
 
-(more background in [this Medium post](https://medium.com/@pberlandier/using-generative-ai-in-a-rule-based-decision-32b67bb91403)
+(more background in [this Medium post](https://medium.com/@pberlandier/using-generative-ai-in-a-rule-based-decision-32b67bb91403))
 
 This repo provides a Java XOM library (see `watsonx-helper` [Maven project](./watsonx-helper)) to support the invocation of a watsonx.ai inference from ODM rules.
 
