@@ -10,6 +10,9 @@
     <TaskList>
       <StartTask Identifier="task_0"/>
       <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="determine review sentiment" Ordering="Literal">
+        <InitialActions Language="bal"><![CDATA[set the project id of 'the LLM service' to "2209af66-226e-400a-b72e-5efe778e0abb" ;
+set the model id of 'the LLM service' to "google/flan-ul2" ;
+set the repetition penalty of 'the LLM service' to 1.05 ;]]></InitialActions>
         <RuleList>
           <Rule Uuid="1754707d-4258-4b65-b759-0fbdf0e4d730"/>
           <Rule Uuid="7cdfa6cd-5389-4ef1-8499-7191645db5a6"/>
@@ -54,12 +57,12 @@
       <Data Name="node_2#width">128.70117</Data>
       <Data Name="node_0#width">21.0</Data>
       <Data Name="node_3#y">302.2189</Data>
-      <Data Name="node_4#x">64.3506</Data>
+      <Data Name="node_4#x">64.350586</Data>
       <Data Name="node_4#y">207.31062</Data>
       <Data Name="node_0#x">64.350586</Data>
       <Data Name="node_0#y">10.5</Data>
       <Data Name="node_1#x">64.350586</Data>
-      <Data Name="node_1#y">388.92004</Data>
+      <Data Name="node_1#y">388.92007</Data>
       <Data Name="node_2#x">64.350586</Data>
       <Data Name="node_2#y">105.05176</Data>
       <Data Name="node_3#x">102.350586</Data>

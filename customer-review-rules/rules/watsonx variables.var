@@ -2,7 +2,7 @@
 <ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
   <name>watsonx variables</name>
   <uuid>f2af8c4b-d764-49a9-b682-3b228d9f345a</uuid>
-  <variables name="url" type="java.lang.String" initialValue="&quot;https://eu-de.ml.cloud.ibm.com/ml/v1/text/generation?version=2023-05-29&quot;" verbalization="url"/>
-  <variables name="apikey" type="java.lang.String" initialValue="&quot;&lt;your-api-key>&quot;" verbalization="apikey"/>
+  <variables name="url" type="java.lang.String" initialValue="&quot;&lt;your-watsonx-instance-url>&quot;" verbalization="url"/>
+  <variables name="apikey" type="java.lang.String" initialValue="&quot;&lt;your-instance-api-key>&quot;" verbalization="apikey"/>
   <variables name="llmService" type="com.ibm.odm.WatsonxAIRunner" initialValue="new com.ibm.odm.WatsonxAIRunner()" verbalization="the LLM service"/>
 </ilog.rules.studio.model.base:VariableSet>
