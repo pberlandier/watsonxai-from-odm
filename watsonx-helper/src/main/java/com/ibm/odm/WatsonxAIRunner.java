@@ -9,10 +9,10 @@ import org.json.simple.parser.JSONParser;
 import com.mashape.unirest.http.Unirest;
 
 /**
- * This class allows the preparation and invocation of a **watsonx.ai** inference.
- * It holds the definition of a template payload for REST API end-point call
- * along with the model parameters to run the inference, and also the prompt template with
- * the target variable values.
+ * This class allows the preparation and invocation of a **watsonx.ai**
+ * inference. It holds the definition of a template payload for REST API
+ * end-point call along with the model parameters to run the inference, and also
+ * the prompt template with the target variable values.
  * 
  * @author PIERREBerlandier
  *
@@ -31,20 +31,21 @@ public class WatsonxAIRunner {
 	private boolean exception = false;
 	private String message;
 	//
-	// Model parameters with a default value.
+	// Model parameters: you can provide a default value for these parameters or set
+	// their value as part of the ODM ruleflow using the WatsonxAIRunner setters.
 	//
-	private String projectId = "<project-id>";
-	private String modelId = "google/flan-ul2";
+	private String projectId = "<your-watsonx-project-id>";
+	private String modelId = "<your-favorite-llm>";
 	private String decodingMethod = "greedy";
 	private int maxNewTokens = 5;
 	private int minNewTokens = 0;
-	private int repetitionPenalty = 1;
+	private double repetitionPenalty = 1.0;
 	//
 	// API end-point payload template.
 	//
 	private static String inputTemplate = "{\r\n" + " \"input\": \"%s\",\r\n" + " \"parameters\": {\r\n"
 			+ "  \"decoding_method\": \"%s\",\r\n" + "  \"max_new_tokens\": %d,\r\n" + "  \"min_new_tokens\": %d,\r\n"
-			+ "  \"stop_sequences\": [],\r\n" + "  \"repetition_penalty\": %d\r\n" + " },\r\n"
+			+ "  \"stop_sequences\": [],\r\n" + "  \"repetition_penalty\": %f\r\n" + " },\r\n"
 			+ " \"model_id\": \"%s\",\r\n" + " \"project_id\": \"%s\"\r\n" + "}";
 
 	public String getDecodingMethod() {
@@ -71,11 +72,11 @@ public class WatsonxAIRunner {
 		this.minNewTokens = minNewTokens;
 	}
 
-	public int getRepetitionPenalty() {
+	public double getRepetitionPenalty() {
 		return repetitionPenalty;
 	}
 
-	public void setRepetitionPenalty(int repetitionPenalty) {
+	public void setRepetitionPenalty(double repetitionPenalty) {
 		this.repetitionPenalty = repetitionPenalty;
 	}
 
@@ -149,7 +150,8 @@ public class WatsonxAIRunner {
 
 	/**
 	 * Runs the web service call with Unirest.
-	 * @param url URL for the deployed watsonx.ai instance
+	 * 
+	 * @param url       URL for the deployed watsonx.ai instance
 	 * @param apiKey
 	 * @param normalize If true, applies some post-processing on the output string.
 	 */
@@ -170,13 +172,15 @@ public class WatsonxAIRunner {
 				output = normalize(output);
 			}
 		} catch (Exception e) {
+			output = null;
 			exception = true;
 			message = e.getMessage();
 		}
 	}
-	
+
 	/**
 	 * Gets a bearer token for the web service execution.
+	 * 
 	 * @param apiKey
 	 * @return
 	 * @throws Exception

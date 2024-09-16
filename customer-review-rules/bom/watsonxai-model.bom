@@ -18,11 +18,12 @@ public class WatsonxAIRunner
     public readonly string output;
     public string projectId;
     public string promptTemplate;
-    public int repetitionPenalty;
+    public double repetitionPenalty;
     public readonly boolean valid;
     public WatsonxAIRunner();
     public void addVariable(string arg1, string arg2);
     public void clearVariables();
+    public string normalize(string arg);
     public void runInference(string arg1, string arg2, boolean arg3);
     public void runInference();
 }
