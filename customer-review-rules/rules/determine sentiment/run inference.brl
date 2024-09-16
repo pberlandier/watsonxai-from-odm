@@ -3,7 +3,9 @@
   <name>run inference</name>
   <uuid>7cdfa6cd-5389-4ef1-8499-7191645db5a6</uuid>
   <locale>en_US</locale>
-  <definition><![CDATA[then
+  <definition><![CDATA[if
+	the sentiment of review is null 
+then
 	run inference on 'the LLM service' ;
 	set the sentiment of review to the sentiment from the output of 'the LLM service' ; 
 	
