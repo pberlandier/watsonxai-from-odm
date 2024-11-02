@@ -1,3 +1,5 @@
+![](./doc/prescriptive-predictive.jpeg)
+
 # watsonx.ai invocation from ODM
 
 (more background in [this Medium post](https://medium.com/@pberlandier/using-generative-ai-in-a-rule-based-decision-32b67bb91403))
