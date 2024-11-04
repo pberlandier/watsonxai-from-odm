@@ -1,4 +1,4 @@
-![](./doc/prescriptive-predictive.jpeg)
+![](./doc/cartoonish-logic.png)
 
 # watsonx.ai invocation from ODM
 
